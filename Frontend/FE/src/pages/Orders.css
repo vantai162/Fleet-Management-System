@@ -1,0 +1,171 @@
+/* Orders CSS - Used by TripManagement for orders sub-feature */
+
+.trip-orders-detail {
+  padding: 20px;
+}
+
+.trip-orders-back {
+  background: #6b7280;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.trip-orders-back:hover {
+  background: #4b5563;
+}
+
+.trip-orders-header {
+  margin-bottom: 20px;
+}
+
+.trip-orders-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.trip-orders-icon {
+  color: #3b82f6;
+}
+
+.trip-orders-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.trip-orders-stat {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.trip-orders-stat-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.trip-orders-stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.order-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.order-info h4 {
+  margin: 0 0 4px 0;
+  color: #1f2937;
+}
+
+.order-info p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.order-status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.order-status.waiting {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.order-status.in_transit {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.order-status.delivered {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.order-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.order-step.completed {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.step-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-complete {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-complete:hover {
+  background: #059669;
+}
+
+@media (max-width: 768px) {
+  .trip-orders-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .order-card-top {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

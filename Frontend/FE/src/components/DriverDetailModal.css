@@ -1,0 +1,245 @@
+.dd-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dd-modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dd-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.dd-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.dd-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.dd-close-btn:hover {
+  color: #1f2937;
+}
+
+.dd-modal-body {
+  padding: 24px;
+}
+
+.dd-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.dd-error {
+  padding: 20px;
+  background: #fee;
+  color: #c33;
+  border-radius: 8px;
+  border: 1px solid #fcc;
+  text-align: center;
+}
+
+.dd-section {
+  margin-bottom: 24px;
+}
+
+.dd-section:last-child {
+  margin-bottom: 0;
+}
+
+.dd-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dd-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.dd-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dd-label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.dd-value {
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.dd-status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.dd-status-badge.status-available {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.dd-status-badge.status-on_trip {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.dd-status-badge.status-offline {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.dd-status-badge.status-unknown {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.dd-notes {
+  padding: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+  .dd-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dd-history-loading {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.dd-no-history {
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.dd-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dd-history-item {
+  padding: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.dd-history-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.dd-history-label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.dd-history-value {
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 500;
+  text-align: right;
+}
+
+.dd-trip-status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dd-trip-status.status-completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.dd-trip-status.status-in_progress {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.dd-trip-status.status-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.dd-trip-status.status-unknown {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.dd-history-more {
+  padding: 12px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 13px;
+  font-style: italic;
+}

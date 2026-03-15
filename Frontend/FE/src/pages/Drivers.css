@@ -1,0 +1,393 @@
+.drivers-page {
+  padding: 10px;
+  background: #f3f4f6;
+  min-height: 100vh;
+}
+
+.drivers-header-simple {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.drivers-header-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.drivers-header-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000000;
+  margin-top: 8px;
+}
+
+.drivers-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.driver-stat {
+  background: #fff;
+  border: 1px solid #a0a0a0;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.driver-stat-label {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.driver-stat-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* Filters Container */
+.drivers-filters-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.drivers-filters-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Row 1 specific: search takes remaining space, status on right */
+.drivers-filters-row:first-child {
+  display: flex;
+  gap: 12px;
+}
+
+.drivers-filters-row:first-child .drivers-search-box {
+  flex: 1;
+  max-width: none;
+}
+
+.drivers-filters-row:first-child .custom-select-container {
+  margin-left: auto;
+  min-width: 200px;
+}
+
+.drivers-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #a0a0a0;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+.drivers-search-box svg {
+  color: #6b7280;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.drivers-search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #1f2937;
+  height: 100%;
+}
+
+.drivers-search-box input::placeholder {
+  color: #9ca3af;
+}
+
+.drivers-filter-input {
+  padding: 10px 14px;
+  border: 1px solid #a0a0a0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+  background: #ffffff;
+  transition: border-color 0.2s;
+  min-width: 160px;
+}
+
+.drivers-filter-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.drivers-filter-input::placeholder {
+  color: #9ca3af;
+}
+
+.drivers-new-btn {
+  background: #16a34a;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.drivers-new-btn:hover {
+  background: #15803d;
+}
+
+/* Drivers Table */
+.drivers-table-card {
+  background: #fff;
+  border: 1px solid #a0a0a0;
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.drivers-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.drivers-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.drivers-table thead {
+  background: #f8fafc;
+}
+
+.drivers-table th {
+  padding: 16px 18px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.drivers-td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #a0a0a0;
+  vertical-align: middle;
+}
+
+.drivers-tr:last-child .drivers-td {
+  border-bottom: none;
+}
+
+.drivers-tr:hover .drivers-td {
+  background: #fbfdff;
+}
+
+.drivers-td-actions {
+  text-align: center;
+  width: 140px;
+}
+
+/* Table cell content */
+.drivers-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.drivers-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f3f4f6; /* Đổi sang màu xám nhạt cho giống bên User */
+  color: #9ca3af; /* Màu icon FaUser khi không có ảnh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px; /* Kích thước icon FaUser */
+  font-weight: 600;
+  overflow: hidden; /* QUAN TRỌNG: Để ảnh img hiện đúng trong vòng tròn */
+  flex-shrink: 0;
+}
+
+/* Thêm mới đoạn này để ảnh luôn lấp đầy khung */
+.drivers-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.drivers-name-text {
+  font-weight: 600;
+  color: #111827;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.drivers-id-text {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.drivers-phone-text {
+  color: #374151;
+  font-size: 14px;
+}
+
+.drivers-email-text {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.drivers-licenses-text,
+.drivers-exp-text,
+.drivers-rating-text {
+  color: #374151;
+  font-size: 14px;
+}
+
+/* Status badges */
+.drivers-status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status-available,
+.status-san_sang {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-on_trip,
+.status-dang_chay {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-offline,
+.status-nghi {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.status-unknown {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Action buttons */
+.drivers-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.drivers-icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #a0a0a0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.drivers-icon-view {
+  color: #3b82f6;
+}
+
+.drivers-icon-view:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.drivers-icon-edit {
+  color: #3b82f6;
+}
+
+.drivers-icon-edit:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.drivers-icon-delete {
+  color: #dc2626;
+}
+
+.drivers-icon-delete:hover {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+
+/* Spinner animation */
+.line-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 980px) {
+  .drivers-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .drivers-filters {
+    flex-direction: column;
+  }
+}
+
+/* Colored stat boxes */
+.driver-stat-1 {
+  background: #dcfce7 !important; /* Darker light green */
+}
+
+.driver-stat-2 {
+  background: #dbeafe !important; /* Darker light blue */
+}
+
+.driver-stat-3 {
+  background: #fef08a !important; /* Darker light yellow */
+}
+
+.driver-stat-4 {
+  background: #fecaca !important; /* Darker light red */
+}

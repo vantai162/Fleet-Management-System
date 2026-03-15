@@ -1,0 +1,175 @@
+.user-add-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 3000;
+}
+
+.user-add-container {
+  width: min(760px, 100%);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+  overflow: hidden;
+}
+
+.user-add-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-add-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.user-add-close {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #94a3b8;
+}
+
+.user-add-form {
+  padding: 20px 22px 24px;
+}
+
+.mt-3 {
+  margin-top: 16px;
+}
+
+.user-add-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.user-add-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.user-add-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.user-add-form .required {
+  color: #ef4444;
+}
+
+.user-add-form .input {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 0 12px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.user-add-form .input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.user-add-error {
+  margin-top: 12px;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.user-add-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #eef2f7;
+}
+
+.user-add-license-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.user-add-license-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.user-add-license-remove {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.user-add-license-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.user-add-license-add {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px dashed #94a3b8;
+  background: #f8fafc;
+  color: #1e293b;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.btn-primary {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #1e40af;
+}
+
+@media (max-width: 720px) {
+  .user-add-grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  .user-add-license-row {
+    grid-template-columns: 1fr;
+  }
+}

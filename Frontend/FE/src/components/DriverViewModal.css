@@ -1,0 +1,168 @@
+.driver-view-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 15, 25, 0.45);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 24px;
+  z-index: 60;
+}
+
+.driver-view-container {
+  width: 100%;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(2,6,23,0.15);
+}
+
+.driver-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.driver-view-back {
+  background: transparent;
+  border: none;
+  color: #374151;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.driver-view-top {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 6px;
+}
+
+.driver-view-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 999px;
+  background: #eaf2ff;
+  color: #1d5bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.driver-view-name {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.driver-view-pills {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.driver-pill {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.driver-pill-status {
+  background: #e7efff;
+  color: #1d4ed8;
+}
+
+.driver-pill-shift {
+  background: #fff3cc;
+  color: #a16207;
+}
+
+.driver-view-contacts {
+  margin-top: 12px;
+  color: #374151;
+  display: grid;
+  gap: 8px;
+}
+
+.driver-view-stats {
+  display: flex;
+  gap: 18px;
+  margin: 18px 6px;
+}
+
+.driver-view-stat {
+  background: #fff;
+  border: 1px solid #eef2f7;
+  padding: 16px;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stat-label {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.driver-view-tabs {
+  margin-top: 18px;
+}
+
+.tabs-nav {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #eef2f7;
+  padding-bottom: 12px;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 12px 6px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.tab.active {
+  color: #1d5bff;
+  border-bottom: 2px solid #1d5bff;
+}
+
+.tab-panel {
+  padding: 18px 6px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.info-label {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.info-value {
+  color: #0f172a;
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+

@@ -1,0 +1,143 @@
+.trip-cost-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 15, 25, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 80;
+}
+
+.trip-cost-container {
+  width: 720px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 30px 60px rgba(2,6,23,0.2);
+}
+
+.trip-cost-header {
+  border-bottom: 1px solid #eef2f7;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.trip-cost-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.trip-cost-section .section-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  position: relative;
+  font-size: 15px;
+}
+.trip-cost-section .section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #eef2f7;
+  display: block;
+}
+
+.existing-list {
+  background: #fafbfc;
+  border: 1px solid #eef2f7;
+  border-radius: 8px;
+  padding: 8px;
+  min-height: 80px;
+}
+
+.existing-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #f1f5f9;
+}
+
+.existing-left .existing-type {
+  font-weight: 700;
+}
+
+.existing-left .existing-desc {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.existing-left .existing-date {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.existing-amount {
+  color: #ef4444;
+  font-weight: 700;
+  min-width: 88px;
+  text-align: right;
+}
+
+.trip-cost-section label {
+  display: block;
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.trip-cost-section select,
+.trip-cost-section input,
+.trip-cost-section textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e6e9ee;
+  border-radius: 8px;
+  margin-top: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.trip-cost-section textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.trip-cost-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 14px;
+  border-top: 1px solid #eef2f7;
+  padding-top: 12px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: #fff;
+  border: 1px solid #e6e9ee;
+  color: #374151;
+}
+
+.btn-primary {
+  background: #1d5bff;
+  color: #fff;
+}
+
+

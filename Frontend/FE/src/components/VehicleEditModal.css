@@ -1,0 +1,167 @@
+.ve-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.ve-modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ve-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.ve-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.ve-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.ve-close-btn:hover {
+  color: #1f2937;
+}
+
+.ve-modal-body {
+  padding: 24px;
+}
+
+.ve-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.ve-error {
+  padding: 20px;
+  background: #fee;
+  color: #c33;
+  border-radius: 8px;
+  border: 1px solid #fcc;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.ve-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.ve-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ve-form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.ve-form-group input,
+.ve-form-group select,
+.ve-form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #a0a0a0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1f2937;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ve-form-group input:focus,
+.ve-form-group select:focus,
+.ve-form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.ve-form-group textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.ve-modal-footer {
+  display: flex;
+  flex-direction: row !important;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #a0a0a0;
+}
+
+.ve-btn-cancel,
+.ve-btn-submit {
+  flex: 1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.ve-btn-cancel {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.ve-btn-cancel:hover {
+  background: #e5e7eb;
+}
+
+.ve-btn-submit {
+  background: #3b82f6;
+  color: white;
+}
+
+.ve-btn-submit:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.ve-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .ve-form-row {
+    grid-template-columns: 1fr;
+  }
+}

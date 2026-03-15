@@ -1,0 +1,350 @@
+﻿.account-container {
+  padding: 24px 32px;
+  color: #1e293b;
+}
+
+.account-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.account-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 24px;
+}
+
+.account-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.account-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.avatar-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-circle {
+  width: 110px;
+  height: 110px;
+  background: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 40px;
+  overflow: hidden;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-btn {
+  background: #f1f5f9;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.upload-btn.is-loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.avatar-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.avatar-delete {
+  background: #fff;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.avatar-delete:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.avatar-note {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.avatar-error {
+  font-size: 12px;
+  color: #dc2626;
+}
+
+.divider {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #e2e8f0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 18px;
+}
+
+.full-width {
+  grid-column: 1 / 3;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #475569;
+}
+
+input {
+  padding: 10px 12px;
+  width: 100%; /* Äáº£m báº£o input chiáº¿m Ä‘á»§ khÃ´ng gian */
+
+  /* border-radius: 8px; */ /* Bá»Ž: ÄÃ£ chuyá»ƒn lÃªn .input-wrapper */
+  /* border: 1px solid #cbd5e1; */ /* Bá»Ž: ÄÃ£ chuyá»ƒn lÃªn .input-wrapper */
+  border: none; /* XÃ“A border cá»§a input, chá»‰ giá»¯ border cá»§a wrapper */
+  font-size: 14px;
+  background: transparent; /* Ná»n trong suá»‘t Ä‘á»ƒ tháº¥y background cá»§a wrapper */
+}
+
+input:focus {
+  outline: none;
+  /*border-color: #2563eb;*/
+}
+
+/* [Má»šI] ThÃªm lá»›p focus cho .input-wrapper */
+.input-wrapper:has(input:focus) {
+  border-color: #2563eb; /* Khi input bÃªn trong focus, wrapper sáº½ thay Ä‘á»•i border */
+  box-shadow: 0 0 0 1px #2563eb; /* ThÃªm shadow nháº¹ cho hiá»‡u á»©ng focus Ä‘áº¹p hÆ¡n */
+}
+
+.input-wrapper {
+  position: relative; /* NGá»® Cáº¢NH: Thiáº¿t láº­p Ä‘iá»ƒm neo cho icon (position: absolute) */
+  margin-top: 6px; /* Thay tháº¿ margin-top cÅ© cá»§a input */
+  border-radius: 8px; /* Giá»¯ border-radius cho wrapper */
+  border: 1px solid #cbd5e1; /* Giá»¯ border cho wrapper */
+  background: #fff; /* Äáº£m báº£o ná»n tráº¯ng */
+  display: flex;
+  align-items: center;
+  padding: 0; /* XÃ³a padding á»Ÿ wrapper */
+}
+
+/* [Má»šI] Style cho Icon */
+.input-icon {
+  position: absolute; /* Vá»Š TRÃ TUYá»†T Äá»I: Äáº·t icon bÃªn trong wrapper */
+  left: 12px; /* Äáº©y icon cÃ¡ch lá» trÃ¡i 12px */
+  font-size: 16px;
+  color: #64748b; /* MÃ u xÃ¡m cho icon */
+  top: 50%;
+  transform: translateY(-50%); /* CÄƒn giá»¯a dá»c */
+  z-index: 2; /* Äáº£m báº£o icon náº±m trÃªn input */
+}
+.input-wrapper:has(.input-icon) input {
+  /* Ãp dá»¥ng padding-left lá»›n hÆ¡n chá»‰ khi icon Tá»’N Táº I bÃªn trong wrapper */
+  padding-left: 40px;
+}
+.input-wrapper.is-readonly {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+.input-wrapper.is-readonly input {
+  color: #64748b;
+}
+.input-wrapper.is-readonly .input-icon {
+  color: #94a3b8;
+}
+.save-btn {
+  margin-top: 14px;
+  background: #2563eb;
+  border: none;
+  padding: 10px 18px;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.account-save-error {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #dc2626;
+}
+.account-save-success {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #16a34a;
+}
+.full-width {
+  grid-column: span 2;
+}
+
+.account-card.full-width {
+  grid-column: 1 / 3;
+}
+
+@media (max-width: 900px) {
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-card.full-width {
+    grid-column: 1;
+  }
+}
+
+/* Notification Block */
+.notification-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-row:last-child {
+  border-bottom: none;
+}
+
+.notification-info strong {
+  font-size: 15px;
+  color: #222;
+}
+
+.notification-info p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.notification-row input[type="checkbox"] {
+  /* XÃ³a má»i margin vÃ  border khÃ´ng cáº§n thiáº¿t tá»« cÃ¡c rule input chung */
+  margin: 0;
+  border: 1px solid #ccc;
+  /* TÃ¹y chá»‰nh kÃ­ch thÆ°á»›c náº¿u cáº§n, vÃ­ dá»¥ 18px */
+  width: 18px;
+  height: 18px;
+  /* Äáº£m báº£o nÃ³ khÃ´ng bá»‹ áº£nh hÆ°á»Ÿng bá»Ÿi cÃ¡c padding/styles khÃ¡c cá»§a input thÆ°á»ng */
+  padding: 0;
+}
+
+.account-otp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 24px;
+}
+
+.account-otp-card {
+  width: min(520px, 100%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+}
+
+.account-otp-subtitle {
+  margin: 8px 0 16px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.account-otp-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.account-otp-cancel {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1e293b;
+}
+
+.account-otp-confirm {
+  background: #2563eb;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.account-otp-error {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #dc2626;
+}
+
+.account-otp-hint {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+
+.gender-group {
+  margin-top: 6px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gender-pill {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gender-pill:hover {
+  border-color: #2563eb;
+  color: #1d4ed8;
+}
+
+.gender-pill.is-active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}

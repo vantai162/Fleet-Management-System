@@ -1,0 +1,405 @@
+.fuel-page {
+  padding: 10px;
+  background: #f3f4f6;
+  min-height: 100vh;
+}
+
+.fuel-header-simple {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.fuel-header-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.fuel-header-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000000;
+  margin-top: 8px;
+}
+
+.fuel-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.fuel-stat {
+  background: #fff;
+  border: 1px solid #a0a0a0;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.fuel-stat-1 {
+  background: #dcfce7;
+}
+
+.fuel-stat-2 {
+  background: #dbeafe;
+}
+
+.fuel-stat-3 {
+  background: #fef08a;
+}
+
+.fuel-stat-4 {
+  background: #fecaca;
+}
+
+.fuel-stat-label {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.fuel-stat-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* Filters */
+.fuel-filters-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.fuel-filters-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Search box */
+.fuel-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #a0a0a0;
+  height: 44px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.fuel-search-box svg {
+  color: #6b7280;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.fuel-search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #1f2937;
+  height: 100%;
+}
+
+.fuel-search-box input::placeholder {
+  color: #9ca3af;
+}
+
+.fuel-amount-input {
+  padding: 10px 14px;
+  border: 1px solid #a0a0a0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+  min-width: 160px;
+}
+
+.fuel-amount-input:focus {
+  border-color: #3b82f6;
+}
+
+.fuel-amount-input::placeholder {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.fuel-new-btn {
+  background: #16a34a;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-left: auto;
+  transition: background-color 0.2s ease;
+}
+
+.fuel-new-btn:hover {
+  background: #15803d;
+}
+
+/* Fuel Table */
+.fuel-table-card {
+  background: #fff;
+  border: 1px solid #a0a0a0;
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.fuel-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.fuel-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.fuel-table thead {
+  background: #f8fafc;
+}
+
+.fuel-table th {
+  padding: 16px 18px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.fuel-td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #a0a0a0;
+  vertical-align: middle;
+}
+
+.fuel-tr:last-child .fuel-td {
+  border-bottom: none;
+}
+
+.fuel-tr:hover .fuel-td {
+  background: #fbfdff;
+}
+
+.fuel-td-actions {
+  text-align: center;
+  width: 120px;
+}
+
+/* Action buttons */
+.fuel-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.fuel-icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #a0a0a0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fuel-icon-delete {
+  color: #dc2626;
+}
+
+.fuel-icon-delete:hover {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+
+/* Spinner animation */
+.line-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modal */
+.fuel-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: grid;
+  place-items: center;
+  z-index: 1200;
+}
+
+.fuel-modal {
+  width: min(720px, 92vw);
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+  overflow: hidden;
+}
+
+.fuel-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.fuel-modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.fuel-icon-btn-close {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.fuel-modal-body {
+  padding: 18px 22px 22px;
+  display: grid;
+  gap: 16px;
+}
+
+.fuel-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.fuel-modal-field {
+  display: grid;
+  gap: 8px;
+}
+
+.fuel-modal-field label {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.fuel-input {
+  width: 100%;
+  border: 1px solid #d5dbe7;
+  border-radius: 12px;
+  padding: 10px 12px;
+  outline: none;
+  background: white;
+  font-size: 14px;
+}
+
+.fuel-input:focus {
+  border-color: #3b82f6;
+}
+
+.fuel-required {
+  color: #dc2626;
+}
+
+.fuel-total {
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.fuel-total-hint {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.fuel-form-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+.fuel-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 6px;
+}
+
+.fuel-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: #1d4ed8;
+  color: white;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(29, 78, 216, 0.3);
+}
+
+.fuel-primary-btn:hover {
+  background: #1e40af;
+}
+
+.fuel-secondary-btn {
+  border: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fuel-secondary-btn:hover {
+  background: #f9fafb;
+}
+
+@media (max-width: 980px) {
+  .fuel-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fuel-filters {
+    flex-direction: column;
+  }
+
+  .fuel-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}

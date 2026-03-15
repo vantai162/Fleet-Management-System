@@ -1,0 +1,53 @@
+export const mockTrips = [
+  {
+    id: "bt1",
+    customer: "Cong ty TNHH ABC",
+    phone: "0241234567",
+    from: "Khu CN Thang Long, Ha Noi",
+    to: "Khu CN Vsip, Hai Phong",
+    date: "20/12/2024",
+    time: "08:00",
+    vehicleType: "Xe tai lon",
+    vehicleNote: "May moc cong nghiep - 5 tan",
+    note: "Can bao quan can than",
+    status: "pending",
+  },
+  {
+    id: "bt2",
+    customer: "Nguyen Van Tuan",
+    phone: "0987654321",
+    from: "San bay Noi Bai",
+    to: "Khach san Hilton, Ha Noi",
+    date: "16/12/2024",
+    time: "14:30",
+    vehicleType: "Xe khach",
+    vehicleNote: "35 nguoi",
+    note: "",
+    status: "confirmed",
+  },
+];
+
+export const mockRequests = [
+  {
+    id: "ar1",
+    vehicle: "29A-12345 - Xe tai nho",
+    requester: "Tran Thi Binh",
+    currentDriver: null,
+    newDriver: "Le Thi Mai",
+    reason: "Tai xe hien tai dang nghi phep",
+    requestedAt: "2024-12-14T09:00:00",
+    processedAt: null,
+    status: "pending",
+  },
+  {
+    id: "ar2",
+    vehicle: "29D-22222 - Xe khach",
+    requester: "Nguyen Van An",
+    currentDriver: "Nguyen Thi Hoa",
+    newDriver: "Le Thi Mai",
+    reason: "Chuyen doi ca lam viec",
+    requestedAt: "2024-12-10T15:30:00",
+    processedAt: "2024-12-10T16:00:00",
+    status: "approved",
+  },
+];
